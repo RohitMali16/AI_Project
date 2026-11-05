@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | AI Interview Prep Assistant</title>
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body class="auth-page">
+
+<main class="auth-container">
+
+    <section class="welcome-section">
+        <div class="brand">
+            <span class="brand-icon">AI</span>
+            <span>InterviewPrep</span>
+        </div>
+
+        <div class="welcome-content">
+            <p class="eyebrow">PREPARE WITH CONFIDENCE</p>
+            <h1>Your next opportunity starts with better practice.</h1>
+
+            <p>
+                Generate technical interview questions, improve your answers
+                and understand difficult concepts with your AI-powered
+                preparation partner.
+            </p>
+
+            <ul>
+                <li>✓ Role-based interview questions</li>
+                <li>✓ AI feedback on your answers</li>
+                <li>✓ Personal progress and interview history</li>
+            </ul>
+        </div>
+
+        <p class="footer-text">Learn. Practice. Improve. Repeat.</p>
+    </section>
+
+    <section class="form-section">
+
+        <div class="mobile-brand">
+            <span class="brand-icon">AI</span>
+            InterviewPrep
+        </div>
+
+        <div class="form-heading">
+            <p class="eyebrow">YOUR PERSONAL INTERVIEW COACH</p>
+            <h2 id="formTitle">Welcome back</h2>
+            <p id="formSubtitle">
+                Enter your details to continue your preparation.
+            </p>
+        </div>
+
+        <div class="auth-tabs">
+            <button type="button" class="tab active"
+                    id="loginTab">Login</button>
+
+            <button type="button" class="tab"
+                    id="registerTab">Create Account</button>
+        </div>
+
+        <form id="authForm" novalidate>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="you@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter your password"
+                   minlength="8" required>
+
+            <div id="confirmGroup" class="hidden-field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword"
+                       name="confirmPassword"
+                       placeholder="Enter password again"
+                       minlength="8">
+            </div>
+
+            <button type="submit" id="submitButton" class="primary-btn">
+                Login to your account
+            </button>
+
+        </form>
+
+        <p id="authMessage" class="form-message"></p>
+
+        <p class="security-note">
+            🔒 Your account is protected with encrypted password storage.
+        </p>
+
+        <p class="switch-text" id="switchCopy">
+            Don't have an account?
+            <button type="button" id="switchButton">Create one</button>
+        </p>
+
+    </section>
+
+</main>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>

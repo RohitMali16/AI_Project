@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17223b;
+}
+
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #edf2ff, #f8faff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 1080px;
+    min-height: 650px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(20, 35, 70, 0.12);
+}
+
+.welcome-section {
+    background: linear-gradient(145deg, #101b35, #1a2c55);
+    color: white;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: #315bd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.welcome-content {
+    max-width: 430px;
+}
+
+.eyebrow {
+    color: #8099e8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.welcome-content h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.welcome-content p {
+    color: #c4cee5;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.welcome-content ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.welcome-content li {
+    margin: 16px 0;
+    font-size: 14px;
+    color: #e5ebfa;
+}
+
+.footer-text {
+    color: #9eadd0;
+    font-size: 12px;
+}
+
+.form-section {
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-brand {
+    display: none;
+}
+
+.form-heading h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form-heading p:last-child {
+    color: #69758d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f0f3f9;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 30px 0 25px;
+}
+
+.tab {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #69758d;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: white;
+    color: #315bd6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#authForm label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#authForm input {
+    padding: 14px;
+    border: 1px solid #dce2ee;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+}
+
+#authForm input:focus {
+    border-color: #315bd6;
+    box-shadow: 0 0 0 3px rgba(49, 91, 214, 0.1);
+}
+
+.primary-btn {
+    margin-top: 18px;
+    padding: 15px;
+    background: #315bd6;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.primary-btn:hover {
+    background: #2448b8;
+}
+
+.primary-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.hidden-field {
+    display: none;
+}
+
+.form-message {
+    margin-top: 14px;
+    min-height: 20px;
+    font-size: 13px;
+}
+
+.form-message.error {
+    color: #b42318;
+}
+
+.form-message.success {
+    color: #087b55;
+}
+
+.security-note {
+    color: #7b879b;
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+.switch-text {
+    text-align: center;
+    color: #69758d;
+    font-size: 13px;
+    margin-top: 28px;
+}
+
+.switch-text button {
+    border: none;
+    background: transparent;
+    color: #315bd6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 760px) {
+    .auth-page {
+        padding: 15px;
+    }
+
+    .auth-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .welcome-section {
+        display: none;
+    }
+
+    .form-section {
+        padding: 35px 25px;
+    }
+
+    .mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+
+    .mobile-brand .brand-icon {
+        background: #e9efff;
+    }
+
+    .form-heading h2 {
+        font-size: 27px;
+    }
+}
